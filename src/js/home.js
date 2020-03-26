@@ -1,6 +1,4 @@
 console.log('home');
-import util from '../utils/index';
-window.onload = function() {
-  console.log('hello world');
-  document.getElementsByTagName('h1')[0].innerText = 'hello world';
-};
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
