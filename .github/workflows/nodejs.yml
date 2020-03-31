@@ -26,5 +26,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm i
     - run: npm run build
+    - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: dist # The folder the action should deploy.
       env:
         CI: true
