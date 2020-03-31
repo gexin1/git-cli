@@ -17,9 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build project # This would actually build your project, using zip for an example artifact
-        run: npm i
-        run: npm run build
-        run: |
+      - run: npm i
+      - run: npm run build
+      - run: |
           zip --junk-paths dist ./dist
       - name: Create Release
         id: create_release
